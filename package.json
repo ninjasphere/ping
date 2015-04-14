@@ -10,5 +10,9 @@
   },
   "scripts": {
     "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "forwarded-for": "^1.0.0"
   }
 }
