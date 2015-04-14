@@ -12,7 +12,7 @@ setInterval(function() {
 
   for (var publicIP in seen) {
     for (var localIP in seen[publicIP]) {
-      if ((new Date().getTime() - seen[publicIP][localIP].time) > ONE_HOUR) {
+      if ((new Date().getTime() - seen[publicIP][localIP].time) > (ONE_HOUR / 4)) {
         delete seen[publicIP][localIP];
       }
     }
@@ -20,6 +20,9 @@ setInterval(function() {
 
 }, ONE_HOUR / 4);
 
+app.get('/pong', function (req, res) {
+  res.send(true);
+});
 
 app.get('/', function (req, res) {
 
@@ -28,7 +31,7 @@ app.get('/', function (req, res) {
 
   var localIP = req.query.ip;
 
-  if (localIP) {
+  if (localIP && localIP.length < 20 && req.query.id && req.query.id.length < 30) {
     seen[publicIP][localIP] = {
         time: new Date().getTime(),
         ip: localIP,
