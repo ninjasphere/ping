@@ -4,6 +4,9 @@ var forwarded = require('forwarded-for');
 var express = require('express');
 var app = express();
 
+// This will be lost when the service is shut down when idle.
+// That shouldn't happen when lots of Spheres are pinging it, but
+// could be kept awake using NewRelic monitoring etc..
 var seen = {};
 
 var ONE_HOUR = 1000 * 60 * 60;
