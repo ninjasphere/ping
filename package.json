@@ -1,7 +1,7 @@
 {
   "name": "ping",
   "version": "1.0.0",
-  "description": "Tiny service to allow Ninja Sphere instances to find each other when Zeroconf isn't working.",
+  "description": "Tiny service to allow Ninja Sphere nodes to find each other when Zeroconf isn't working.",
   "main": "index.js",
   "author": "Elliot Shepherd <elliot@ninjablocks.com>",
   "license": "MIT",
