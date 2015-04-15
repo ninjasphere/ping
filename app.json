@@ -1,4 +1,4 @@
 {
   "name": "ping",
-  "description": "Tiny service to allow Ninja Sphere instances to find each other when Zeroconf isn't working."
+  "description": "Tiny service to allow Ninja Sphere nodes to find each other when Zeroconf isn't working."
 }
